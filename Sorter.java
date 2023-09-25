@@ -1,6 +1,20 @@
 public class Sorter {
 
-    public static void selectionSort(int[] arr) {
+    public static void insertionSort(int array[]) {  
+        int n = array.length;  
+        for (int j = 1; j < n; j++) {  
+            int key = array[j];  
+            int i = j-1;  
+            while ( (i > -1) && ( array [i] > key ) ) {  
+                array [i+1] = array [i];  
+                i--;  
+            }  
+            array[i+1] = key;  
+        }  
+    } //
+
+
+    public void selectionSort(int[] arr) {
         int n = arr.length;
 
         for (int i = 0; i < n - 1; i++) {
@@ -14,9 +28,9 @@ public class Sorter {
             arr[i] = temp;
         }
     }
-
-    public static void sort(int[] arr) {
-        selectionSort(arr);
+    public static void sort(int[] arr){
+        insertionSort(arr);
     }
+
 
 }
