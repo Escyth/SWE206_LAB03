@@ -28,6 +28,9 @@ public class Sorter {
             arr[i] = temp;
         }
     }
+    public static void sort(int[] arr){
+        insertionSort(arr);
+    }
 
 
 }
